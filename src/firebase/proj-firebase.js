@@ -37,7 +37,7 @@ export default function ProjetoFirebase() {
     if (type === 'login') {
 
       const user = firebase.auth().signInWithEmailAndPassword(email, password).then((user) => {
-        console.log(user.user )
+        changeStatus(user.user.uid)
       })
       //tratamento de erro
       .catch((error) => {
@@ -49,7 +49,7 @@ export default function ProjetoFirebase() {
     }else{
       //aqui cadastramos o usuário
       const user = firebase.auth().createUserWithEmailAndPassword(email, password).then((user) => {
-        console.log(user.user)
+        changeStatus(user.user.uid)
       })
       .catch((error) => {
         console.log(error);
