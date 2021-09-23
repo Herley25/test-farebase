@@ -28,7 +28,7 @@ export default function App() {
   const [ user,setUser ] = useState(null);
 
   if (!user) {
-    return <ProjetoFirebase />
+    return <ProjetoFirebase changeStatus={ (user) => setUser(user) }/>
   }
 
   return(
