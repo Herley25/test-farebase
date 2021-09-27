@@ -24,7 +24,7 @@ import './style';
 import firebase from '../services/firebaseConnect';
 
 // componente de login
-export default function ProjetoFirebase() {
+export default function ProjetoFirebase({ changeStatus }) {
 
   const [type, setType] = useState('login');
   const [email, setEmail] = useState('');
